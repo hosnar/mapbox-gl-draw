@@ -164,6 +164,8 @@ DirectSelect.toDisplayFeatures = function(state, geojson, push) {
 };
 
 DirectSelect.onTrash = function(state) {
+  //eslint-disable-next-line
+  console.log(">>>",state.selectedCoordPaths)
   if (state.selectedCoordPaths.length === 0) {
     this.deleteFeature([state.featureId]);
     this.changeMode(Constants.modes.SIMPLE_SELECT, {});
